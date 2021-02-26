@@ -43,6 +43,19 @@ body, input, textarea, button {
     font: 400 1rem "Inter", sans-serif;
 }
 
+body::-webkit-scrollbar {
+    background-color: var(--blue-dark);
+    width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
+
 button {
     cursor: pointer;
 }
