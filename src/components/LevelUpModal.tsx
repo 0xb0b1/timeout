@@ -3,7 +3,7 @@ import { ChallengesContext } from "../contexts/ChallengesContext";
 import styles from "../styles/components/LevelUpModal.module.css";
 
 export function LevelUpModal() {
-    const { level } = useContext(ChallengesContext);
+    const { level, closeLevelUpModal } = useContext(ChallengesContext);
 
     return (
         <div className={styles.overlay}>
@@ -13,7 +13,7 @@ export function LevelUpModal() {
                 <strong>Parabéns</strong>
                 <p>Você alcançou um novo level</p>
 
-                <button type="button">
+                <button type="button" onClick={closeLevelUpModal}>
                     <img src="/icons/close.svg" alt="fechar modal" />
                 </button>
             </div>
@@ -21,7 +21,7 @@ export function LevelUpModal() {
     );
 }
 
-/* first approach, don't know it is best pratice
+/* first approach, don't know if it is the best way to do it, but I found this solution
 
 interface LevelProps {
     level: number;
