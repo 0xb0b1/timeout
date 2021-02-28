@@ -1,4 +1,4 @@
-```const hello = () => "hello";```
+```const hello = message => message;```
 
 
 ## Working on Documentation...
